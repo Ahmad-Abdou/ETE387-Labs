@@ -56,9 +56,24 @@ You are missing other crucial pieces in your explanation. The input `x` to the b
 `Task 1.12:` You do not comment your results. Did you notice an effect? In my experiments, using the Kaiming initialisation reduces the loss of both models: With the same random seed as before, the loss for the topic model is now 0.1017 for the topic classification model (a 54% reduction) and 0.3798 for the sentiment classification model (a 34% reduction).
 
 ## My improvements
-...
+`1.02` the code is simplified as suggested.
+`1.04` The vocabulary size is changed to the suggested one 1024
+`1.06` fixed as suggested and added my interpretation regarding the number of unicode characters.
+
+`1.07` fixed based on the suggested answer
+
+`1.09` I refactored the train function to use keyword arguments (filename, n_vocab, embedding_dim, learning_rate, batch_size, num_of_epochs) with the original values as defaults. I also now pass the label argument through to ReviewDataset(filename, label=label), so I can train either the category model (label=0) or the sentiment model (label=1).
+
+`1.10` Added the missing part regarding the harder part.
+With the fixed training loop the final loss for the category model (label=0) is ` 0.2177`, while the final loss for the sentiment model (label=1) is `0.5688`. Since therefore, sentiment classification appears to be the harder task. The seed is needed to get the same random values we got first time  when training our model, to avoid having different output each time we train the model.
+
+`1.12` I repeated the experiments with and without Kaiming initialisation and then compared the final losses.  
+- Without Kaiming, the final loss was 0.2177 for the category model and 0.5688 for the sentiment model.  
+- With Kaiming, the final loss dropped to 0.1453 for the category model and 0.4498 for the sentiment model.
+
+So Kaiming initialisation clearly improves optimisation for both tasks in my setup (the loss is lower in both cases). This matches the idea that a better weight initialisation can make it easier for gradient descent to find good minima and leads to faster or more stable convergence.
 ## How I used AI
-...
+Ai was actually very helpful in many of those tasks especially to explain parts that were very confusing (like when it comes to the order of the steps, such as why we took this step first) Although I found out some AI modes that are useful such as learning mode which provides works in a way where it asks the users questions and make the conversation more interactive until the user figure out the solution.  
 
 
 # Feedback on Lab 2
@@ -88,7 +103,8 @@ You are missing other crucial pieces in your explanation. The input `x` to the b
 `Task 2.12:` Looks good!
 
 ## My improvements
+
 ...
 
 ## How I used AI
-...
+The same as first lab
