@@ -108,3 +108,14 @@ Ai was actually very helpful in many of those tasks especially to explain parts 
 
 ## How I used AI
 The same as first lab
+
+
+
+# Lab 3
+## How I used AI
+The same as the other labs, starting solving the lab by asking AI directly, I rarely watched videos, so my responses mainly relied on AI responses, however after learning the solution in many on the question, I try to write it in my own words
+
+
+# Lab 4
+## How I used AI
+The same as the other labs, starting solving the lab by asking AI directly, I rarely watched videos, so my responses mainly relied on AI responses, however in this one I tried kind of wrote the same soultion as the AI suggested and this was mainly due to some pressure that I felt when doing other courses and I am out of time. So in my mind is to learn the concepts later..
